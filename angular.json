@@ -5,7 +5,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "demo": {
+    "DxIniciativas": {
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -39,10 +39,11 @@
             "assets": [],
             "index": "src/index.html",
             "main": "src/main.ts",
-            "outputPath": "dist/demo",
+            "outputPath": "dist/DxIniciativas",
             "scripts": [],
             "styles": [
-              "src/global_styles.css"
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/styles.scss"
             ],
             "tsConfig": "src/tsconfig.app.json"
           }
@@ -50,7 +51,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "demo:build"
+            "browserTarget": "DxIniciativas:build"
           }
         },
         "lint": {
@@ -69,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "development": {
-              "browserTarget": "demo:build:development"
+              "browserTarget": "DxIniciativas:build:development"
             },
             "production": {
-              "browserTarget": "demo:build:production"
+              "browserTarget": "DxIniciativas:build:production"
             }
           },
           "defaultConfiguration": "development"
@@ -89,7 +90,8 @@
             "polyfills": [],
             "scripts": [],
             "styles": [
-              "styles.css"
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/styles.scss"
             ],
             "tsConfig": "src/tsconfig.spec.json"
           }
