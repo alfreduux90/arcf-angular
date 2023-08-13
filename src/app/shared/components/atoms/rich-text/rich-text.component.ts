@@ -1,13 +1,13 @@
 import { Component, OnInit, Input, AfterViewInit, AfterContentInit, OnDestroy, AfterViewChecked, AfterContentChecked, DoCheck } from '@angular/core';
 
 @Component({
-  selector: 'gabarit-rich-text',
+  selector: 'dp-rich-text',
   templateUrl: './rich-text.component.html',
   styleUrls: ['./rich-text.component.scss']
 })
 export class RichTextComponent implements OnInit, AfterViewInit, AfterContentInit, OnDestroy, AfterViewChecked, AfterContentChecked, DoCheck {
 
-  @Input() htmlContent: string;
+  @Input() htmlContent!: string;
 
   constructor() { }
 

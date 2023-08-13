@@ -11,7 +11,7 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'gabarit-button',
+  selector: 'dp-button',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss'],
 })
@@ -25,7 +25,7 @@ export class ButtonComponent
     AfterContentChecked,
     DoCheck
 {
-  @Input() text: string;
+  @Input()text!: string;
 
   constructor() {
     console.log('text constructor', this.text);
