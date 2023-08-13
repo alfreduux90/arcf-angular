@@ -1,13 +1,14 @@
 import { Component, OnInit, Input, AfterViewInit, AfterContentInit, OnDestroy, AfterViewChecked, AfterContentChecked, DoCheck } from '@angular/core';
 
+
 @Component({
-  selector: 'gabarit-avatar-comp',
+  selector: 'dp-avatar-comp',
   templateUrl: './avatar-comp.component.html',
   styleUrls: ['./avatar-comp.component.scss']
 })
 export class AvatarCompComponent implements OnInit, AfterViewInit, AfterContentInit, OnDestroy, AfterViewChecked, AfterContentChecked, DoCheck {
 
-  @Input() srcUri: string;
+  @Input() srcUri!: string;
 
   constructor() { }
 

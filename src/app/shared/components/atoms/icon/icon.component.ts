@@ -1,17 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'gabarit-icon',
-  templateUrl: './text.component.html',
-  styleUrls: ['./text.component.scss']
+  selector: 'dp-icon',
+  templateUrl: './icon.component.html',
+  styleUrls: ['./icon.component.scss']
 })
-export class IconComponent implements OnInit {
-
-  @Input() text: string;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+export class IconComponent {
+  @Input() icon!: string;
 
 }
