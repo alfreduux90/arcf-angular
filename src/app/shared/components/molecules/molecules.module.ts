@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { NgStyle } from '@angular/common';
-import { MaterialModule } from 'src/app/material.module';
+import { MaterialModule } from '../../../material.module';
 
 import { AvatarContainerComponent } from './avatar-container/avatar-container.component';
 import { FormComponent } from './form/form.component';

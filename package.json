@@ -20,16 +20,20 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "16.2.0",
+    "@angular/cdk": "16.2.0",
     "@angular/common": "16.2.0",
     "@angular/compiler": "16.2.0",
+    "@angular/compiler-cli": "16.2.0",
     "@angular/core": "16.2.0",
     "@angular/forms": "16.2.0",
+    "@angular/localize": "^16.0.0",
     "@angular/material": "16.2.0",
     "@angular/platform-browser": "16.2.0",
     "@angular/platform-browser-dynamic": "16.2.0",
     "@angular/router": "16.2.0",
     "@kolkov/angular-editor": "^3.0.0-beta.0",
     "@ng-bootstrap/ng-bootstrap": "^15.1.1",
+    "@popperjs/core": "^2.11.6 ^2.11.8",
     "@rx-angular/cdk": "latest",
     "@rx-angular/template": "^16.0.2",
     "bootstrap": "^5.3.1",
@@ -37,6 +41,7 @@
     "ngx-avatars": "^1.6.1",
     "rxjs": "^7.8.1",
     "tslib": "^2.6.1",
+    "typescript": ">=4.9.3 <5.2",
     "zone.js": "~0.13.1"
   },
   "devDependencies": {
