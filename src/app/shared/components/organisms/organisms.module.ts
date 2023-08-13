@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { NgStyle } from '@angular/common';
-import { MaterialModule } from 'src/app/material.module';
+import { MaterialModule } from '../../../material.module';
 
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
