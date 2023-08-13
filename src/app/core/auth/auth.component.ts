@@ -52,7 +52,7 @@ export class AuthComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.authType = this.route.snapshot.url.at(-1)!.path;
+    this.authType = this.route.snapshot.url[this.route.snapshot.url.length - 1].path;
     this.title = this.authType === "login" ? "Sign in" : "Sign up";
     if (this.authType === "register") {
       this.authForm.addControl(
