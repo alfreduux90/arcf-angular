@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 import { WelcomeRoutingModule } from './welcome-routing.module';
 import { WelcomeComponent } from './welcome.component';
 import { MatCardModule } from '@angular/material/card';
+import { MoleculesModule } from '../../../molecules/molecules.module'
 
 @NgModule({
   imports: [
     CommonModule,
     WelcomeRoutingModule,
-    MatCardModule
+    MatCardModule,
+    MoleculesModule
   ],
   declarations: [
     WelcomeComponent
