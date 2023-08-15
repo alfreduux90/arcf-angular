@@ -1,10 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ItemSelectionService } from '../../../../core/services/item-selection.service'
 
 @Component({
-  selector: 'app-icon-container',
+  selector: 'dp-icon-container',
   templateUrl: './icon-container.component.html',
   styleUrls: ['./icon-container.component.scss']
 })
-export class IconContainerComponent {
-  icons = ['Icon1', 'Icon2', 'Icon3'];
+export class IconContainerComponent implements OnInit {
+  selectedItem!: number;
+
+  constructor(private itemSelectionService: ItemSelectionService) {}
+
+  ngOnInit() {
+    this.itemSelectionService.selectedItem$.subscribe(itemId => {
+      this.selectedItem = itemId;
+    });
+  }
 }

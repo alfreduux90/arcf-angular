@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'dp-icon',
@@ -6,6 +6,11 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./icon.component.scss']
 })
 export class IconComponent {
-  @Input() icon!: string;
+  @Input() item!: any;
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 
 }
