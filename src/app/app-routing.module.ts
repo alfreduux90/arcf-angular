@@ -5,33 +5,48 @@ import { map } from "rxjs/operators";
 
 const routes: Routes = [
   {
-    path: "",
-    loadComponent: () =>
-      import("./modules/home/home.component").then((m) => m.HomeComponent),
+    path: '',
+    children: [
+      {
+        path: 'static',
+        loadChildren: () => import('./shared/components/pages/static/static.module').then(m=>m.StaticModule)
+      },
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: '/static/welcome',
+      }
+    ]
   },
   {
-    path: "login",
-    loadComponent: () =>
-      import("./core/auth/auth.component").then((m) => m.AuthComponent),
+    path: 'home',
+    loadChildren: () => import('./modules/home/home.component').then(m => ({default: m.HomeComponent})),
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./core/auth/auth.component').then(m => ({default: m.AuthComponent})),
     canActivate: [
       () => inject(UserService).isAuthenticated.pipe(map((isAuth) => !isAuth)),
     ],
   },
   {
-    path: "register",
-    loadComponent: () =>
-      import("./core/auth/auth.component").then((m) => m.AuthComponent),
+    path: 'register',
+    loadChildren: () => import('./core/auth/auth.component').then(m => ({default: m.AuthComponent})),
     canActivate: [
       () => inject(UserService).isAuthenticated.pipe(map((isAuth) => !isAuth)),
     ],
   },
   {
-    path: "settings",
-    loadComponent: () =>
-      import("./modules/settings/settings.component").then(
-        (m) => m.SettingsComponent
-      ),
-    canActivate: [() => inject(UserService).isAuthenticated],
+    path: 'settings',
+    loadChildren: () => import('./modules/settings/settings.component').then(m => ({default: m.SettingsComponent})),
+    canActivate: [
+      () => inject(UserService).isAuthenticated
+    ],
+  },
+  {
+    path: '**',
+    pathMatch: 'full',
+    redirectTo: '/static/404',
   },
 ]
     
@@ -39,6 +54,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes, {
       preloadingStrategy: PreloadAllModules,
+      useHash: true,
     }),
   ],
   exports: [RouterModule],
