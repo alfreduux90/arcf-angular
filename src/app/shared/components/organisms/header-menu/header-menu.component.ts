@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
 import {ItemSelectionService} from '../../../../core/services/item-selection.service'
 
 @Component({
