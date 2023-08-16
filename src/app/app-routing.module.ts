@@ -20,7 +20,7 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => import('./modules/home/home.component').then(m => ({default: m.HomeComponent})),
+    loadChildren: () => import('./shared/components/pages/homepage/homepage.component').then(m => ({default: m.HomepageComponent})),
   },
   {
     path: 'login',

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { ItemSelectionService } from '../../../../core/services/item-selection.service'
 
 @Component({
@@ -7,13 +7,9 @@ import { ItemSelectionService } from '../../../../core/services/item-selection.s
   styleUrls: ['./icon-container.component.scss']
 })
 export class IconContainerComponent implements OnInit {
-  selectedItem!: number;
+  @Input() item!: string;
 
-  constructor(private itemSelectionService: ItemSelectionService) {}
+  constructor(){}
 
-  ngOnInit() {
-    this.itemSelectionService.selectedItem$.subscribe(itemId => {
-      this.selectedItem = itemId;
-    });
-  }
+  ngOnInit() {}
 }

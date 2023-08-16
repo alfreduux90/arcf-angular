@@ -6,6 +6,7 @@ import { HeaderTemplateComponent } from './header-template/header-template.compo
 
 
 import { OrganismsModule } from '../organisms/organisms.module';
+import { MoleculesModule } from '../molecules/molecules.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { OrganismsModule } from '../organisms/organisms.module';
   ],
   imports: [
     MaterialModule,
-    OrganismsModule 
+    OrganismsModule,
+    MoleculesModule 
   ],
  
 })

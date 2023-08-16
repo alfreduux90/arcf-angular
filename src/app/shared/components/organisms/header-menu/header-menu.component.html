@@ -1,3 +1,7 @@
-<li *ngFor="let item of items" [(click)="onItemClick(item.id)"> 
-  <a><dp-icon-container>{{item.name}}</dp-icon-container></a>
-</li>
+<div *ngFor="let item of items"> 
+  <ul> 
+    <li>
+      <a><dp-icon-container>{{item}}</dp-icon-container></a>
+    <li>
+  </ul>
+</div>
