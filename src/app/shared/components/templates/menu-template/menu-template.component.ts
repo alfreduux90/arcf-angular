@@ -6,6 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./menu-template.component.scss'],
 })
 export class MenuTemplateComponent implements OnInit {
+
   @Output() menuToggle = new EventEmitter<void>();
 
   constructor() { 

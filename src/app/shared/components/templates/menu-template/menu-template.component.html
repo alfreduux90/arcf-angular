@@ -1,20 +1,25 @@
 <button mat-icon-button [matMenuTriggerFor]="menu">
   <dp-icon-container item="menu"></dp-icon-container>
 </button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item>
-    <a routerLink=''>
+<div>
+<mat-menu class=container #menu="matMenu" yPosition="above" xPosition="before">
+  <button mat-button [routerLink]="'/static/not-found'">
+    <a class="container_a">
       <dp-icon-container item="home"></dp-icon-container>
-    <span>Inicio</span>
+    <span class="navegacion-list-label">Inicio</span>
     </a>
   </button>
-  <button mat-menu-item disabled>
-    <!–– Poner el dp icon container ––>
-    <mat-icon>voicemail</mat-icon> 
-    <span>Check voice mail</span>
+  <button mat-button disabled>
+    <a class="container_a" routerLink=''>
+      <dp-icon-container item="voicemail"></dp-icon-container>
+    <span class="navegacion-list-label">Check voice mail</span>
+  </a>
   </button>
-  <button mat-menu-item>
-    <mat-icon>notifications_off</mat-icon>
-    <span>Disable alerts</span>
+  <button mat-button>
+    <a class="container_a">
+      <dp-icon-container item="notifications_off"></dp-icon-container>
+    <span class="navegacion-list-label">Disable alerts</span>
+  </a>
   </button>
 </mat-menu>
+</div>

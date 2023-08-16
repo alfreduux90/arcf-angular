@@ -8,6 +8,7 @@ import { MenuTemplateComponent } from './menu-template/menu-template.component';
 
 import { OrganismsModule } from '../organisms/organisms.module';
 import { MoleculesModule } from '../molecules/molecules.module';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { MoleculesModule } from '../molecules/molecules.module';
     MenuTemplateComponent
   ],
   imports: [
+    RouterModule,
     MaterialModule,
     OrganismsModule,
     MoleculesModule 
