@@ -1,5 +1,4 @@
 import { Component, OnInit, Input} from '@angular/core';
-import { ItemSelectionService } from '../../../../core/services/item-selection.service'
 
 @Component({
   selector: 'dp-icon-container',

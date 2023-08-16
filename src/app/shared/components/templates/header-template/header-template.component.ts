@@ -7,10 +7,6 @@ import {ItemSelectionService} from '../../../../core/services/item-selection.ser
   styleUrls: ['./header-template.component.scss']
 })
 export class HeaderTemplateComponent implements OnInit {
-  items = [
-    { id: 1, name: 'menu'},
-  ];
-
   @Output() menuToggle = new EventEmitter<void>();
 
   constructor(private itemSelectionService: ItemSelectionService) {}
