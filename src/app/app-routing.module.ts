@@ -5,6 +5,7 @@ import { map } from "rxjs/operators";
 
 const routes: Routes = [
   {
+
     path: '',
     children: [
       {
@@ -30,6 +31,7 @@ const routes: Routes = [
     ],
   },
   {
+
     path: 'register',
     loadChildren: () => import('./core/auth/auth.component').then(m => ({default: m.AuthComponent})),
     canActivate: [
@@ -37,6 +39,7 @@ const routes: Routes = [
     ],
   },
   {
+
     path: 'settings',
     loadChildren: () => import('./modules/settings/settings.component').then(m => ({default: m.SettingsComponent})),
     canActivate: [
@@ -55,6 +58,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes, {
       preloadingStrategy: PreloadAllModules,
       useHash: true,
+
     }),
   ],
   exports: [RouterModule],

@@ -14,8 +14,10 @@ import { EMPTY } from "rxjs";
 import { AtomsModule } from './shared/components/atoms/atoms.module';
 import { MoleculesModule } from './shared/components/molecules/molecules.module';
 import { OrganismsModule } from './shared/components/organisms/organisms.module';
+
 import { TemplatesModule } from './shared/components/templates/templates.module';
 import { PagesModule } from './shared/components/pages/pages.module';
+
 
 export function initAuth(jwtService: JwtService, userService: UserService) {
   return () => (jwtService.getToken() ? userService.getCurrentUser() : EMPTY);
@@ -35,6 +37,7 @@ export function initAuth(jwtService: JwtService, userService: UserService) {
     OrganismsModule,
     TemplatesModule,
     PagesModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
