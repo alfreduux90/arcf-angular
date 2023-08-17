@@ -1,0 +1,67 @@
+@import "../../../../../styles/main.scss";
+
+.spacer {
+  flex: 1 1 auto;
+  background: $secondary-dark;
+  padding: 1 em;
+  position: fixed;
+  top: 0;
+}
+
+.navegacion-fuente {
+  color: #ffffff;
+
+  &_h1 {
+    font-size: 1.2 em;
+    font-weight: bold;
+    }
+}
+
+.navegacion-menu {
+  list-style: none;
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 50 px;
+
+  padding: 0;
+  margin: 0;
+  background: $secondary-dark;
+
+  &_a {
+    text-decoration: none;
+    display: block;
+    padding: 0.5em;
+    color: white;
+    cursor: pointer;
+  }
+
+  &_a:hover {
+    background: $primary-dark;
+    opacity: 0.8;
+    transition: opacity 250ms ease;
+  }
+}
+
+
+@media all and (max-width: 800px) {
+  .navegacion-menu {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .navegacion-menu {
+    display: none;
+  }
+  .navegacion-menu a {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .navegacion-menu li:last-of-type a {
+    border-bottom: none;
+  }
+}

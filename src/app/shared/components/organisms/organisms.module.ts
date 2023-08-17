@@ -3,7 +3,7 @@ import { NgStyle } from '@angular/common';
 import { MaterialModule } from '../../../material.module';
 
 import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderMenuComponent } from './header-menu/header-menu.component';
 import { FormOrganismComponent } from './form-organism/form-organism.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -12,8 +12,21 @@ import { AtomsModule } from '../atoms/atoms.module';
 
 
 @NgModule({
-    declarations: [FooterComponent, HeaderComponent, FormOrganismComponent],
-    exports: [FooterComponent, HeaderComponent, FormOrganismComponent],
-    imports: [MoleculesModule, MaterialModule, AtomsModule, ReactiveFormsModule]
+    declarations: [
+      FooterComponent, 
+      HeaderMenuComponent, 
+      FormOrganismComponent
+    ],
+    exports: [
+      FooterComponent, 
+      HeaderMenuComponent, 
+      FormOrganismComponent
+    ],
+    imports: [
+      MoleculesModule, 
+      MaterialModule, 
+      AtomsModule, 
+      ReactiveFormsModule
+    ]
 })
 export class OrganismsModule {}

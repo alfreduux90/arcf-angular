@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
+
+import { Component, OnInit, Input} from '@angular/core';
 
 @Component({
-  selector: 'app-icon-container',
+  selector: 'dp-icon-container',
   templateUrl: './icon-container.component.html',
   styleUrls: ['./icon-container.component.scss']
 })
-export class IconContainerComponent {
-  icons = ['Icon1', 'Icon2', 'Icon3'];
+export class IconContainerComponent implements OnInit {
+  @Input() item!: string;
+
+  constructor(){}
+
+  ngOnInit() {}
 }
