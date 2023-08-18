@@ -9,12 +9,13 @@ export class MenuTemplateComponent implements OnInit {
   items = [
     { link: '/static/not-found', icon: 'home', description: 'Inicio' },
     { link: '/static/not-welcome', icon: 'voicemail', description: 'Check voice mail' },
-    { link: '/login', icon: 'notifications_off', description: 'Disable alertssss' }
+    { link: '/static/welcome', icon: 'notifications_off', description: 'Disable alertssss' }
   ];
 
   @Output() menuToggle = new EventEmitter<void>();
 
-  constructor() { 
+  constructor(){
+    console.log(this.items);
   }
 
   ngOnInit() {

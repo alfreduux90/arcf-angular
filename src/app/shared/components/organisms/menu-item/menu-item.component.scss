@@ -1,7 +1,7 @@
 @import "../../../../../styles/main.scss";
 
-.container_a {
-  background-color: $on-secondary!important;
+::ng-deep .container_a {
+  background-color: $primary-dark!important;
   :hover {
     background-color: $primary-light;
     opacity: 0.5;

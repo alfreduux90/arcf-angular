@@ -1,8 +1,6 @@
-<div> 
-<button mat-button [routerLink]="[menuitem.link]">
-  <a class="container_a">
-    <dp-icon-container item="menuitem.icon"></dp-icon-container>
+<button mat-button>
+  <a class="container_a" [routerLink]="[menuitem.link]">
+    <dp-icon-container class="navegacion-list-label" item={{menuitem.icon}}></dp-icon-container>
   <span class="navegacion-list-label">{{menuitem.description}}</span>
   </a>
 </button>
-</div>

@@ -1,5 +1,4 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import {ItemSelectionService} from '../../../../core/services/item-selection.service'
 
 @Component({
   selector: 'app-header-template',
@@ -7,14 +6,20 @@ import {ItemSelectionService} from '../../../../core/services/item-selection.ser
   styleUrls: ['./header-template.component.scss']
 })
 export class HeaderTemplateComponent implements OnInit {
+  items = [
+  { link: '/static/not-found', icon: 'how_to_reg', auth: 'false' },
+  { link: '/static/not-welcome', icon: 'login', auth: 'false' },
+  { link: '/static/welcome', icon: 'logout', auth: 'true' },
+];
   @Output() menuToggle = new EventEmitter<void>();
 
-  constructor(private itemSelectionService: ItemSelectionService) {}
+    constructor(){
+      console.log(this.items);
+    }
 
   ngOnInit(): void {}
 
-  onItemClick(itemId: number) {
-    this.itemSelectionService.selectItem(itemId);
+  onItemClick() {
   }
   onMenuToggleDispatch(): void {
     this.menuToggle.emit();

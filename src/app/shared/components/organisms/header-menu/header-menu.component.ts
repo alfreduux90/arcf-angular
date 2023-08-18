@@ -1,24 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import {ItemSelectionService} from '../../../../core/services/item-selection.service'
+import { ShowAuthedDirective } from 'src/app/shared/directives/show-authed.directive';
+import { UserService } from 'src/app/core/services/user.service';
 
 @Component({
-  selector: 'app-header-menu',
+  selector: 'dp-header-menu',
   templateUrl: './header-menu.component.html',
-  styleUrls: ['./header-menu.component.scss']
+  styleUrls: ['./header-menu.component.scss'],
 })
-export class HeaderMenuComponent  {
+export class HeaderMenuComponent implements OnInit{
+  @Input() menuitem: any;
 
-  items = [
-    { id: 1, name: 'login'},
-    { id: 2, name: 'logout' },
-    { id: 3, name: 'about' }
-  ];
+  constructor() {}
 
-  constructor(private itemSelectionService: ItemSelectionService) {}
-
-  onItemClick(itemId: number) {
-    this.itemSelectionService.selectItem(itemId);
+  onItemClick() {
   }
+
+  ngOnInit() {
+  }
+
 }

@@ -13,6 +13,7 @@ import { MenuItemComponent } from './menu-item/menu-item.component';
 
 import { AtomsModule } from '../atoms/atoms.module';
 import { MoleculesModule } from '../molecules/molecules.module';
+import { ShowAuthedDirective } from '../../directives/show-authed.directive';
 
 
 
@@ -33,6 +34,7 @@ import { MoleculesModule } from '../molecules/molecules.module';
       RouterModule,
       CommonModule,
       MaterialModule,
+      ShowAuthedDirective,
       ReactiveFormsModule,
       AtomsModule,
       MoleculesModule

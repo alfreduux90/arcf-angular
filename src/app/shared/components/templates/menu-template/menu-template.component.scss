@@ -1,8 +1,8 @@
 @import "../../../../../styles/main.scss";
 
-.container {
+::ng-deep .container {
   background-color: $primary-dark!important;
-  height: 110%;
+  height: 120%;
   width: 225px;
   line-height: 3px;
   ;
