@@ -25,7 +25,7 @@ export function initAuth(jwtService: JwtService, userService: UserService) {
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +37,6 @@ export function initAuth(jwtService: JwtService, userService: UserService) {
     OrganismsModule,
     TemplatesModule,
     PagesModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,8 @@
 @import "../../../../../styles/main.scss";
 
 .container_a {
-  &:hover {
+  background-color: $on-secondary!important;
+  :hover {
     background-color: $primary-light;
     opacity: 0.5;
     transition: opacity 1000 ms ease;
