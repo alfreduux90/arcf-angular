@@ -22,6 +22,7 @@ export class HeaderComponent implements OnInit {
 
   onItemClick() {
   }
+
   onMenuToggleDispatch(): void {
     this.menuToggle.emit();
   }

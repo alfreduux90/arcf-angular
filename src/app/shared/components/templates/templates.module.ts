@@ -5,11 +5,10 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../../../material.module';
 import { RouterModule } from '@angular/router';
 
-
-
 import { HomeComponent } from './home/home.component';
+
 import { OrganismsModule } from '../organisms/organisms.module';
-import { MoleculesModule } from '../molecules/molecules.module';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +22,6 @@ import { MoleculesModule } from '../molecules/molecules.module';
     CommonModule,
     MaterialModule,
     OrganismsModule,
-    MoleculesModule 
   ],
  
 })

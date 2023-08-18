@@ -12,7 +12,6 @@ export class HeaderMenuComponent implements OnInit{
   @Input() menuitem: any;
 
   constructor() {
-    console.log(this.menuitem);
   }
 
   onItemClick() {
