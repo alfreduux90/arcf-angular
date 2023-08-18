@@ -1,7 +1,7 @@
 import { Component, Input, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ShowAuthedDirective } from 'src/app/shared/directives/show-authed.directive';
-import { UserService } from 'src/app/core/services/user.service';
+import { ShowAuthedDirective } from '../../../directives/show-authed.directive';
+import { UserService } from '../../../../core/services/user.service';
 
 @Component({
   selector: 'dp-header-menu',
