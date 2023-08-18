@@ -2,7 +2,7 @@
   <!-- Ver como pasar ese bool mediante el array que viene del componente padre -->
 <li *appShowAuthed="false">
   <a class="navegacion-menu_a" [routerLink]="[menuitem.link]"> 
-    <dp-icon-container class="navegacion-list-label" item={{menuitem.icon}}></dp-icon-container> 
+    <dp-icon class="navegacion-list-label">{{menuitem.icon}}></dp-icon> 
     <!-- parametro que actualmente tiene el array 
     <span>{{menuitem.auth}}</span>-->
   </a>

@@ -6,19 +6,17 @@ import { MaterialModule } from '../../../material.module';
 import { RouterModule } from '@angular/router';
 
 
-import { MenuTemplateComponent } from './menu-template/menu-template.component';
 
+import { HomeComponent } from './home/home.component';
 import { OrganismsModule } from '../organisms/organisms.module';
 import { MoleculesModule } from '../molecules/molecules.module';
 
 @NgModule({
   declarations: [
-    HeaderTemplateComponent,
-    MenuTemplateComponent
+    HomeComponent
   ],
   exports: [
-    HeaderTemplateComponent,
-    MenuTemplateComponent
+    HomeComponent,
   ],
   imports: [
     RouterModule,

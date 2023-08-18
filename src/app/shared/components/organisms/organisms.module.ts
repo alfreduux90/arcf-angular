@@ -32,7 +32,6 @@ import { ShowAuthedDirective } from '../../directives/show-authed.directive';
       CommonModule,
       MaterialModule,
       ShowAuthedDirective,
-      ReactiveFormsModule,
       AtomsModule,
       MoleculesModule
     ]
