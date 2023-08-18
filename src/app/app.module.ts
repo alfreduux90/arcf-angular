@@ -15,7 +15,7 @@ import { AtomsModule } from './shared/components/atoms/atoms.module';
 import { MoleculesModule } from './shared/components/molecules/molecules.module';
 import { OrganismsModule } from './shared/components/organisms/organisms.module';
 import { TemplatesModule } from './shared/components/templates/templates.module';
-import { PagesModule } from './shared/components/pages/pages.module';
+import { HomepageModule } from './modules/homepage/homepage.module';
 
 
 export function initAuth(jwtService: JwtService, userService: UserService) {
@@ -36,14 +36,14 @@ export function initAuth(jwtService: JwtService, userService: UserService) {
     MoleculesModule,
     OrganismsModule,
     TemplatesModule,
-    PagesModule
+    HomepageModule
   ],
   providers: [
     AtomsModule,
     MoleculesModule,
     OrganismsModule,
     TemplatesModule,
-    PagesModule
+    HomepageModule
   ],
   bootstrap: [AppComponent]
 })

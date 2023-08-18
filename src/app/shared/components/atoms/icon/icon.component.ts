@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'dp-icon',
+  selector: 'app-icon-atom',
   templateUrl: './icon.component.html',
   styleUrls: ['./icon.component.scss']
 })

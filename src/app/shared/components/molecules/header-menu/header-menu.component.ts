@@ -4,7 +4,7 @@ import { ShowAuthedDirective } from '../../../directives/show-authed.directive';
 import { UserService } from '../../../../core/services/user.service';
 
 @Component({
-  selector: 'mol-header-menu',
+  selector: 'header-menu-mol',
   templateUrl: './header-menu.component.html',
   styleUrls: ['./header-menu.component.scss'],
 })

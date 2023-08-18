@@ -1,6 +1,6 @@
 <button mat-icon-button [matMenuTriggerFor]="menu">
-  <dp-icon-container item="menu"></dp-icon-container>
+  <app-icon-atom item="menu"></app-icon-atom>
 </button>
 <mat-menu class=container #menu="matMenu" yPosition="above" xPosition="before">
-    <dp-menu-item *ngFor="let item of items" [menuitem]="item"></dp-menu-item>
+    <menu-item-mol *ngFor="let item of items" [menuitem]="item"></menu-item-mol>
 </mat-menu>

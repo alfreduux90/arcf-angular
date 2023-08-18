@@ -21,7 +21,7 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => import('./shared/components/pages/homepage/homepage.component').then(m => ({default: m.HomepageComponent})),
+    loadChildren: () => import('./modules/homepage/homepage.component').then(m => ({default: m.HomepageComponent})),
   },
   {
     path: 'login',

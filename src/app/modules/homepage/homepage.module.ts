@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TemplatesModule } from '../../../shared/templates/templates.module';
+import { TemplatesModule } from '../../shared/components/templates/templates.module';
 
 @NgModule({
   imports: [
