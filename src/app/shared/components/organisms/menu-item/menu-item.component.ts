@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./menu-item.component.scss']
 })
 export class MenuItemComponent implements OnInit {
-  @Input() menuitems: any;
+  @Input() menuitem: any;
   
   constructor() { }
 

@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { NgStyle } from '@angular/common';
+import { CommonModule } from '@angular/common';
+
 import { MaterialModule } from '../../../material.module';
+import { RouterModule } from '@angular/router';
 
 import { FooterComponent } from './footer/footer.component';
 import { HeaderMenuComponent } from './header-menu/header-menu.component';
@@ -8,9 +11,9 @@ import { FormOrganismComponent } from './form-organism/form-organism.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MenuItemComponent } from './menu-item/menu-item.component';
 
-import { MoleculesModule } from '../molecules/molecules.module';
 import { AtomsModule } from '../atoms/atoms.module';
-import { RouterModule } from '@angular/router';
+import { MoleculesModule } from '../molecules/molecules.module';
+
 
 
 @NgModule({
@@ -28,10 +31,11 @@ import { RouterModule } from '@angular/router';
     ],
     imports: [
       RouterModule,
-      MoleculesModule, 
-      MaterialModule, 
-      AtomsModule, 
-      ReactiveFormsModule
+      CommonModule,
+      MaterialModule,
+      ReactiveFormsModule,
+      AtomsModule,
+      MoleculesModule
     ]
 })
 export class OrganismsModule {}

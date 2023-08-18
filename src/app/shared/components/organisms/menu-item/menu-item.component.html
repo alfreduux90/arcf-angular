@@ -1,8 +1,8 @@
-<div *ngFor="let item of menuitems"> 
-<button mat-button [routerLink]="[item.link]">
+<div> 
+<button mat-button [routerLink]="[menuitem.link]">
   <a class="container_a">
-    <dp-icon-container item="item.icon"></dp-icon-container>
-  <span class="navegacion-list-label">{{item.description}}</span>
+    <dp-icon-container item="menuitem.icon"></dp-icon-container>
+  <span class="navegacion-list-label">{{menuitem.description}}</span>
   </a>
 </button>
 </div>

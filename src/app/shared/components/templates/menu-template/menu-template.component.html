@@ -2,5 +2,7 @@
   <dp-icon-container item="menu"></dp-icon-container>
 </button>
 <mat-menu class=container #menu="matMenu" yPosition="above" xPosition="before">
-    <dp-menu-item [menuitems]="menuitems"></dp-menu-item>
+  <div >
+    <dp-menu-item *ngFor="let item of items" [menuitem]="item"></dp-menu-item>
+  </div>
 </mat-menu>

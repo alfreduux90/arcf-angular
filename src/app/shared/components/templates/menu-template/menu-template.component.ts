@@ -6,7 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./menu-template.component.scss'],
 })
 export class MenuTemplateComponent implements OnInit {
-  menuitems = [
+  items = [
     { link: '/static/not-found', icon: 'home', description: 'Inicio' },
     { link: '/static/not-welcome', icon: 'voicemail', description: 'Check voice mail' },
     { link: '/login', icon: 'notifications_off', description: 'Disable alertssss' }

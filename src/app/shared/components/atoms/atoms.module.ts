@@ -1,8 +1,11 @@
 import { NgModule } from "@angular/core";
 import { NgStyle } from "@angular/common";
-import { MaterialModule } from "../../../material.module";
-import { FormsModule } from "@angular/forms";
+import { CommonModule } from '@angular/common';
 
+import { MaterialModule } from '../../../material.module';
+import { RouterModule } from '@angular/router';
+
+import { FormsModule } from "@angular/forms";
 import { AvatarModule } from "ngx-avatars";
 import { AngularEditorModule } from "@kolkov/angular-editor";
 
@@ -34,6 +37,8 @@ import { TextComponent } from "./text/text.component";
     TextComponent,
   ], // Si deseas exportar para uso externo
   imports: [
+    CommonModule,
+    RouterModule,
     MaterialModule, 
     AvatarModule, 
     AngularEditorModule, 
