@@ -15,7 +15,9 @@ import { AtomsModule } from './shared/components/atoms/atoms.module';
 import { MoleculesModule } from './shared/components/molecules/molecules.module';
 import { OrganismsModule } from './shared/components/organisms/organisms.module';
 import { TemplatesModule } from './shared/components/templates/templates.module';
-import { HomepageModule } from './modules/homepage/homepage.module';
+
+import { HomepageComponent } from './modules/homepage/homepage.component';
+
 
 
 export function initAuth(jwtService: JwtService, userService: UserService) {
@@ -24,7 +26,8 @@ export function initAuth(jwtService: JwtService, userService: UserService) {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
@@ -36,14 +39,12 @@ export function initAuth(jwtService: JwtService, userService: UserService) {
     MoleculesModule,
     OrganismsModule,
     TemplatesModule,
-    HomepageModule
   ],
   providers: [
     AtomsModule,
     MoleculesModule,
     OrganismsModule,
     TemplatesModule,
-    HomepageModule
   ],
   bootstrap: [AppComponent]
 })
