@@ -1,29 +1,9 @@
 @import "../../../../../styles/main.scss";
 
-::ng-deep .container {
+.container {
   background-color: $primary-dark!important;
   height: 110%;
   width: 225px;
   line-height: 3px;
   ;
-
-  &_a {
-    color: white!important;
-  }
-
-  &_a:hover {
-    background-color: $primary-light;
-    opacity: 0.5;
-    transition: opacity 1000 ms ease;
-  }
 }
-
-.navegacion-list-label, mat-menu-item, mat-icon, button {
-  display: inline-block;
-  padding-left: 10px;
-  padding-top: 10px;
-  text-align: justify;
-  color: white;
-  cursor: pointer;
-}
-
