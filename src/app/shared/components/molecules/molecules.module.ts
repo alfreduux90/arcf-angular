@@ -10,11 +10,13 @@ import { FormComponent } from "./form/form.component";
 import { IconContainerComponent } from "./icon-container/icon-container.component";
 import { LabelContainerComponent } from "./label-container/label-container.component";
 import { ListContainerComponent } from "./list-container/list-container.component";
+import { HeaderMenuComponent } from './header-menu/header-menu.component';
 import { AtomsModule } from "../atoms/atoms.module";
 
 @NgModule({
   declarations: [
     AvatarContainerComponent,
+    HeaderMenuComponent,
     FormComponent,
     IconContainerComponent,
     LabelContainerComponent,
@@ -22,6 +24,7 @@ import { AtomsModule } from "../atoms/atoms.module";
   ],
   exports: [
     AvatarContainerComponent,
+    HeaderMenuComponent,
     FormComponent,
     IconContainerComponent,
     LabelContainerComponent,

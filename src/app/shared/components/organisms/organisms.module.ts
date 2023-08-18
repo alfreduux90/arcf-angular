@@ -6,10 +6,9 @@ import { MaterialModule } from '../../../material.module';
 import { RouterModule } from '@angular/router';
 
 import { FooterComponent } from './footer/footer.component';
-import { HeaderMenuComponent } from './header-menu/header-menu.component';
-import { FormOrganismComponent } from './form-organism/form-organism.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { MenuItemComponent } from './menu-item/menu-item.component';
+import { HeaderComponent } from './header/header.component';
+import { MenuComponent } from './menu/menu.component';
+
 
 import { AtomsModule } from '../atoms/atoms.module';
 import { MoleculesModule } from '../molecules/molecules.module';
@@ -19,16 +18,14 @@ import { ShowAuthedDirective } from '../../directives/show-authed.directive';
 
 @NgModule({
     declarations: [
-      FooterComponent, 
-      HeaderMenuComponent, 
-      FormOrganismComponent,
-      MenuItemComponent
+      FooterComponent,
+      HeaderComponent, 
+      MenuComponent
     ],
     exports: [
-      FooterComponent, 
-      HeaderMenuComponent, 
-      FormOrganismComponent,
-      MenuItemComponent
+      FooterComponent,
+      HeaderComponent, 
+      MenuComponent
     ],
     imports: [
       RouterModule,
