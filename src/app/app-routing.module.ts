@@ -9,6 +9,10 @@ const routes: Routes = [
     path: '',
     children: [
       {
+        path: 'auth',
+        loadChildren: () => import('./shared/components/pages/auth/auth.module').then(m=>m.AuthModule)
+      },
+      {
         path: 'static',
         loadChildren: () => import('./shared/components/pages/static/static.module').then(m=>m.StaticModule)
       },
@@ -24,22 +28,6 @@ const routes: Routes = [
     loadChildren: () => import('./modules/homepage/homepage.component').then(m => ({default: m.HomepageComponent})),
   },
   {
-    path: 'login',
-    loadChildren: () => import('./core/auth/auth.component').then(m => ({default: m.AuthComponent})),
-    canActivate: [
-      () => inject(UserService).isAuthenticated.pipe(map((isAuth) => !isAuth)),
-    ],
-  },
-  {
-
-    path: 'register',
-    loadChildren: () => import('./core/auth/auth.component').then(m => ({default: m.AuthComponent})),
-    canActivate: [
-      () => inject(UserService).isAuthenticated.pipe(map((isAuth) => !isAuth)),
-    ],
-  },
-  {
-
     path: 'settings',
     loadChildren: () => import('./modules/settings/settings.component').then(m => ({default: m.SettingsComponent})),
     canActivate: [
