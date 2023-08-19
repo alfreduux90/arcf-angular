@@ -18,6 +18,12 @@ import { TemplatesModule } from './shared/components/templates/templates.module'
 import { HomepageComponent } from './modules/homepage/homepage.component';
 
 import { NotificationModule } from "./core/services";
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { StoreModule } from '@ngrx/store';
+import { StoreModule } from '@ngrx/effects';
+import { reducers, effects } from './core/store';
+
+const StoreDevTools = !environment.production ? StoreDevToolsModule.instrument({maxAge:50}): []; 
 
 
 
@@ -40,8 +46,15 @@ export function initAuth(jwtService: JwtService) {
     MoleculesModule,
     OrganismsModule,
     TemplatesModule,
-    NotificationModule.forRoot()
-
+    NotificationModule.forRoot(),
+    StoreDevTools,
+    StoreModule.forRoot(reducers, {
+      runtimeChecks: {
+        strictActionInmutability: true,
+        strictStateInmutability: true
+      }
+    }),
+    EffectsModule.forRoot(effects)
   ],
   providers: [
     AtomsModule,
