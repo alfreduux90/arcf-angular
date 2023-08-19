@@ -18,6 +18,8 @@ import { TemplatesModule } from './shared/components/templates/templates.module'
 
 import { HomepageComponent } from './modules/homepage/homepage.component';
 
+import { NotificationModule } from "./core/services";
+
 
 
 export function initAuth(jwtService: JwtService, userService: UserService) {
@@ -39,6 +41,8 @@ export function initAuth(jwtService: JwtService, userService: UserService) {
     MoleculesModule,
     OrganismsModule,
     TemplatesModule,
+    NotificationModule.forRoot()
+
   ],
   providers: [
     AtomsModule,

@@ -20,6 +20,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "16.2.0",
+    "@angular/cdk": "16.2.0",
     "@angular/common": "16.2.0",
     "@angular/compiler": "16.2.0",
     "@angular/compiler-cli": "16.2.0",
@@ -32,6 +33,10 @@
     "@angular/router": "16.2.0",
     "@kolkov/angular-editor": "^3.0.0-beta.0",
     "@ng-bootstrap/ng-bootstrap": "^15.1.1",
+    "@ngrx/effects": "^16.2.0",
+    "@ngrx/entity": "^16.2.0",
+    "@ngrx/store": "latest",
+    "@ngrx/store-devtools": "^16.2.0",
     "@popperjs/core": "^2.11.6 ^2.11.8",
     "@rx-angular/cdk": "latest",
     "@rx-angular/template": "^16.0.2",
