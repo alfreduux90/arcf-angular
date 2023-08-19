@@ -1,3 +1,51 @@
-<p>
-register works!
-</p>
+<section>
+  <mat-card>
+    <form #f="ngForm" (ngSubmit)=registrarUsuario(f)>
+
+      <mat-form-field>
+        <mat-label>Nombre</mat-label>
+        <input type="text" matInput placeholder="Ingrese su nombre" name="name" ngModel required>
+        <mat-error>Debe Ingresar un nombre</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Apellido Paterno</mat-label>
+        <input type="text" matInput placeholder="Ingrese su apellido paterno" name="firstname" ngModel required>
+        <mat-error>Debe Ingresar un apellido paterno</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Apellido Materno</mat-label>
+        <input type="text" matInput placeholder="Ingrese su apellido materno" name="lastname" ngModel required>
+        <mat-error>Debe Ingresar un apellido materno</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Nombre de Usuario</mat-label>
+        <input type="text" matInput placeholder="Ingrese su nombre de usuario" name="username" ngModel required>
+        <mat-error>Debe Ingresar un nombre de usuario</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Correo Electronico</mat-label>
+        <input type="email" matInput placeholder="Ingrese su e-mail" name="email" ngModel required>
+        <mat-error>Debe Ingresar un email válido</mat-error>
+      </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Contraseña</mat-label>
+          <input type="password" matInput placeholder="Ingrese su contraseña" name="password" ngModel required minlength="8">
+          <mat-error>La clave debe cumplir con criterios de seguridad</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Confirmar contraseña</mat-label>
+        <input type="password" matInput placeholder="Confirme su contraseña" name="passwordConfirm" ngModel required minlength="8">
+        <mat-error>La clave debe cumplir con criterios de seguridad</mat-error>
+    </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit">Enviar</button>
+
+    </form>
+  </mat-card>
+</section>

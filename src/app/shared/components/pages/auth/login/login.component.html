@@ -1,3 +1,21 @@
-<p>
-login works!
-</p>
+<section>
+  <mat-card>
+    <form #f="ngForm" (ngSubmit)=loginUsuario(f)>
+
+      <mat-form-field>
+        <mat-label>Correo Electronico</mat-label>
+        <input type="email" matInput placeholder="Ingrese su e-mail" name="email" ngModel required>
+        <mat-error>Debe Ingresar un email válido</mat-error>
+      </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Contraseña</mat-label>
+          <input type="password" matInput placeholder="Ingrese su contraseña" name="password" ngModel required>
+          <mat-error>Debe Ingresar una contraseña válida</mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit">Enviar</button>
+
+    </form>
+  </mat-card>
+</section>

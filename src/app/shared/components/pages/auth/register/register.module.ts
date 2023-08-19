@@ -2,12 +2,28 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { RegisterRoutingModule} from './register-routing.module';
+import { RegisterComponent } from './register.component';
+
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
-    RegisterRoutingModule
+    RegisterRoutingModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatCardModule,
+    MatIconModule,
+    MatInputModule,
+    FormsModule
   ],
-  declarations: []
+  declarations: [
+    RegisterComponent
+  ]
 })
 export class RegisterModule { }
