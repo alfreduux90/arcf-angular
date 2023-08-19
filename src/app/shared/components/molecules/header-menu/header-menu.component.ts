@@ -1,7 +1,6 @@
 import { Component, Input, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ShowAuthedDirective } from '../../../directives/show-authed.directive';
-import { UserService } from '../../../../core/services/user.service';
 
 @Component({
   selector: 'header-menu-mol',

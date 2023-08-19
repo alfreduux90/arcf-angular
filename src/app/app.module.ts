@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from "./material.module";
 
 import { JwtService } from "./core/services/jwt.service";
-import { UserService } from "./core/services/user.service";
 import { EMPTY } from "rxjs";
 
 import { AtomsModule } from './shared/components/atoms/atoms.module';
@@ -22,8 +21,8 @@ import { NotificationModule } from "./core/services";
 
 
 
-export function initAuth(jwtService: JwtService, userService: UserService) {
-  return () => (jwtService.getToken() ? userService.getCurrentUser() : EMPTY);
+export function initAuth(jwtService: JwtService) {
+  return () => (jwtService.getToken());
 }
 
 @NgModule({

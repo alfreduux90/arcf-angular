@@ -1,7 +1,7 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NotificationService } from './notification.service';
-import { NotificationComponent } from '../../../shared/molecules/notification.component';
+import { NotificationComponent } from './components';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 

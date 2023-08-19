@@ -1,6 +1,5 @@
 import { inject, NgModule } from "@angular/core";
 import { Routes, RouterModule, PreloadAllModules } from "@angular/router";
-import { UserService } from "./core/services/user.service";
 import { map } from "rxjs/operators";
 
 const routes: Routes = [
@@ -27,13 +26,7 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./modules/homepage/homepage.component').then(m => ({default: m.HomepageComponent})),
   },
-  {
-    path: 'settings',
-    loadChildren: () => import('./modules/settings/settings.component').then(m => ({default: m.SettingsComponent})),
-    canActivate: [
-      () => inject(UserService).isAuthenticated
-    ],
-  },
+
   {
     path: '**',
     pathMatch: 'full',

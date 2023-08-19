@@ -9,7 +9,6 @@ import { ActivatedRoute, Router, RouterLink } from "@angular/router";
 import { NgIf } from "@angular/common";
 import { ListErrorsComponent } from "../../shared/list-errors.component";
 import { Errors } from "../models/errors.model";
-import { UserService } from "../services/user.service";
 import { takeUntil } from "rxjs/operators";
 import { Subject } from "rxjs";
 
@@ -36,7 +35,6 @@ export class AuthComponent implements OnInit, OnDestroy {
   constructor(
     private readonly route: ActivatedRoute,
     private readonly router: Router,
-    private readonly userService: UserService
   ) {
     // use FormBuilder to create a form group
     this.authForm = new FormGroup<AuthForm>({
@@ -74,25 +72,6 @@ export class AuthComponent implements OnInit, OnDestroy {
     this.isSubmitting = true;
     this.errors = { errors: {} };
 
-    let observable =
-      this.authType === "login"
-        ? this.userService.login(
-            this.authForm.value as { email: string; password: string }
-          )
-        : this.userService.register(
-            this.authForm.value as {
-              email: string;
-              password: string;
-              username: string;
-            }
-          );
-
-    observable.pipe(takeUntil(this.destroy$)).subscribe({
-      next: () => void this.router.navigate(["/"]),
-      error: (err) => {
-        this.errors = err;
-        this.isSubmitting = false;
-      },
-    });
+ 
   }
 }
